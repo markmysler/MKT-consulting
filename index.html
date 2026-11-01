@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MKT Consulting | Digital communication and strategy</title>
+<meta name="description" content="MKT Consulting runs the content engine behind your brand: AI video, images and posts, automated clipping and a strategy for every post. Book a call to plan your first 90 days.">
+<meta name="theme-color" content="#f0efec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0c0a" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MKT Consulting | Digital communication and strategy">
+<meta property="og:description" content="Content, clipping and strategy that point back to your account. Book a call to plan your first 90 days.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style>
+/* Layout: the hero pairs the headline with a 3D wall of phone feeds that light up as content spreads. Glass is reserved for controls floating over content (nav, mobile action bar). Everything meant to be read sits on solid surfaces. */
+:root {
+  /* Color */
+  --bg: #f0efec;
+  --surface: #ffffff;
+  --fg: #15130f;
+  --muted: #575249;
+  --line: #dedbd4;
+  --accent: #8a6200;
+  --accent-fill: #e3a812;
+  --accent-ink: #17120a;
+  --accent-soft: #f8f0dc;
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-edge: rgba(255, 255, 255, 0.9);
+  --glass-rim: rgba(21, 19, 15, 0.08);
+  --shadow: rgba(60, 50, 30, 0.16);
+
+  /* Type: six sizes, nothing else */
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --font-num: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --t-xs: 13px;
+  --t-sm: 15px;
+  --t-md: 17px;
+  --t-lg: 22px;
+  --t-xl: clamp(32px, 4vw, 44px);
+  --t-hero: clamp(32px, 4.8vw, 60px);
+
+  /* Shape: three radii, nested so inner = outer - padding */
+  --r-lg: 32px;
+  --r-md: 20px;
+  --r-pill: 999px;
+
+  /* Space: 8px grid */
+  --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s6: 48px; --s8: 64px; --s12: 96px; --s16: 128px;
+  --header-h: 76px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0c0a;
+    --surface: #171613;
+    --fg: #f2efe8;
+    --muted: #aca697;
+    --line: #2b2924;
+    --accent: #f2b632;
+    --accent-fill: #f2b632;
+    --accent-ink: #0d0c0a;
+    --accent-soft: #2a2414;
+    --glass: rgba(23, 22, 19, 0.72);
+    --glass-edge: rgba(255, 255, 255, 0.12);
+    --glass-rim: rgba(0, 0, 0, 0.4);
+    --shadow: rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0c0a;
+  --surface: #171613;
+  --fg: #f2efe8;
+  --muted: #aca697;
+  --line: #2b2924;
+  --accent: #f2b632;
+  --accent-fill: #f2b632;
+  --accent-ink: #0d0c0a;
+  --accent-soft: #2a2414;
+  --glass: rgba(23, 22, 19, 0.72);
+  --glass-edge: rgba(255, 255, 255, 0.12);
+  --glass-rim: rgba(0, 0, 0, 0.4);
+  --shadow: rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--t-md);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg);
+}
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; letter-spacing: -0.02em; font-weight: 700; }
+p, ul, dl, dd { margin: 0; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.num { font-family: var(--font-num); font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.wrap {
+  max-width: 1160px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.eyebrow { font-size: var(--t-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+.glass {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--glass-edge);
+  box-shadow: inset 0 1px 0 var(--glass-edge), inset 0 -1px 0 var(--glass-rim), 0 16px 40px -16px var(--shadow);
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  font: 600 var(--t-sm)/1 var(--font-body); text-decoration: none; cursor: pointer;
+  min-height: 48px; padding: 0 var(--s3); border-radius: var(--r-pill); border: 1px solid transparent;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn-primary { background: var(--accent-fill); color: var(--accent-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--accent-fill) 88%, var(--fg)); }
+.btn-secondary { background: transparent; color: var(--fg); border-color: var(--line); }
+.btn-secondary:hover { border-color: var(--muted); }
+.btn-sm { min-height: 40px; padding: 0 var(--s2); }
+
+/* Header */
+.site-header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  height: var(--header-h); display: flex; align-items: center;
+}
+.nav {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: var(--s2);
+  padding: 6px 6px 6px var(--s3); border-radius: var(--r-pill);
+}
+.brand { font-family: var(--font-display); font-weight: 700; font-size: var(--t-md); text-decoration: none; letter-spacing: -0.01em; }
+.brand span { color: var(--muted); font-weight: 600; }
+.nav-links { display: flex; align-items: center; gap: var(--s1); }
+.nav-link { font-size: var(--t-sm); font-weight: 500; text-decoration: none; color: var(--muted); padding: 10px 12px; border-radius: var(--r-pill); }
+.nav-link:hover { color: var(--fg); }
+
+/* Hero */
+.hero {
+  margin-top: calc(-1 * var(--header-h));
+  padding-block: calc(var(--header-h) + var(--s8)) var(--s8);
+  border-bottom: 1px solid var(--line);
+}
+.hero-copy { display: grid; gap: var(--s3); justify-items: start; align-content: start; }
+.hero h1 { font-size: var(--t-hero); line-height: 1; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.lede { font-size: var(--t-md); color: var(--muted); max-width: 54ch; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--s1); }
+.platforms { font-size: var(--t-sm); color: var(--muted); }
+.stage { position: relative; border-radius: var(--r-lg); overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: pan-y; }
+.no-webgl .stage-wrap, .no-webgl .flow-track { display: none; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--s6); align-items: center; }
+.no-webgl .hero-grid { grid-template-columns: minmax(0, 1fr); }
+.stage-wrap { display: grid; gap: var(--s1); }
+.stage { height: 600px; }
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s4); }
+  .stage-wrap { order: -1; }
+  .stage { height: 460px; }
+}
+
+/* Sections */
+.section { padding-block: var(--s16) 0; scroll-margin-top: var(--header-h); }
+.section-head { display: grid; gap: var(--s2); max-width: 620px; margin-bottom: var(--s6); }
+.section-head h2 { font-size: var(--t-xl); line-height: 1.08; }
+.section-head p { color: var(--muted); }
+
+/* How it works */
+.diagram { color: var(--fg); }
+.diagram svg { display: block; width: 100%; height: auto; }
+.diagram .v { display: none; max-width: 440px; margin: 0 auto; }
+.d-frame { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 6; }
+.d-node { fill: var(--surface); stroke: var(--line); stroke-width: 1; }
+.d-main { fill: var(--accent-fill); }
+.d-dot { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+.d-flow { fill: none; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 6 8; animation: flow 1.2s linear infinite; }
+.d-head { fill: var(--accent); }
+.d-label { fill: var(--accent); font: 700 22px var(--font-display); letter-spacing: 0.04em; }
+.d-title { fill: var(--fg); font: 600 20px var(--font-display); letter-spacing: -0.01em; }
+.d-sub { fill: var(--muted); font: 400 15px var(--font-body); }
+.d-main-title { fill: var(--accent-ink); font: 700 22px var(--font-display); }
+.d-main-sub { fill: var(--accent-ink); font: 500 15px var(--font-body); }
+@keyframes flow { to { stroke-dashoffset: -14; } }
+
+.inperson { margin-top: var(--s6); padding-top: var(--s4); border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--s4); }
+.inperson-head { display: grid; gap: var(--s1); align-content: start; }
+.inperson-head h3 { font-size: var(--t-lg); }
+.inperson-head p { font-size: var(--t-sm); color: var(--muted); }
+.inperson-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); }
+.inperson-list li { display: grid; gap: var(--s1); }
+.inperson-list b { font-weight: 600; }
+.inperson-list span { font-size: var(--t-sm); color: var(--muted); }
+.pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s4); margin-top: var(--s6); }
+.pillar { display: grid; gap: var(--s1); align-content: start; padding-top: var(--s2); border-top: 1px solid var(--line); }
+.pillar h3 { font-size: var(--t-md); font-family: var(--font-body); font-weight: 600; letter-spacing: 0; }
+.pillar p { font-size: var(--t-sm); color: var(--muted); }
+
+/* Plans */
+.compare {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: 12px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(7, auto);
+  column-gap: 12px; row-gap: 12px;
+}
+.plan {
+  grid-row: 1 / span 7; display: grid; grid-template-rows: subgrid; row-gap: var(--s3);
+  padding: var(--s4) var(--s3) var(--s3); border-radius: var(--r-md);
+  border: 1.5px solid transparent; cursor: pointer;
+  transition: background-color .25s ease, border-color .25s ease;
+}
+.plan:nth-of-type(1) { grid-column: 1; }
+.plan:nth-of-type(2) { grid-column: 2; }
+.plan:nth-of-type(3) { grid-column: 3; }
+.plan.is-selected { background: var(--accent-soft); border-color: var(--accent); cursor: default; }
+.plan-name { display: grid; gap: 4px; }
+.plan-name h3 { font-size: var(--t-lg); }
+.plan-name p { font-size: var(--t-sm); color: var(--muted); }
+.price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px var(--s1); }
+.price .amt { font-family: var(--font-display); font-size: var(--t-xl); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.price .per { font-size: var(--t-sm); color: var(--muted); }
+.stat { display: grid; gap: 2px; padding-top: var(--s2); border-top: 1px solid var(--line); }
+.stat dt { font-size: var(--t-xs); color: var(--muted); }
+.stat dd { font-size: var(--t-lg); }
+.features { display: grid; gap: var(--s1); align-content: start; font-size: var(--t-sm); }
+.features li { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 10px; }
+.features svg { width: 18px; height: 18px; margin-top: 2px; color: var(--accent); }
+.features .base { color: var(--muted); }
+.addon {
+  display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 12px; align-items: start;
+  padding: var(--s2); border-radius: 12px; background: var(--surface); border: 1px solid var(--line);
+  font-size: var(--t-sm); cursor: pointer;
+}
+.addon input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--accent); }
+.addon b { display: block; font-weight: 600; }
+.addon span { color: var(--muted); }
+.plan .btn { width: 100%; align-self: end; }
+
+.all-features { margin-top: var(--s3); border-top: 1px solid var(--line); }
+.all-features summary {
+  cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+  padding-block: var(--s3); font-weight: 600;
+}
+.all-features summary::-webkit-details-marker { display: none; }
+.all-features summary svg { width: 20px; height: 20px; color: var(--muted); transition: transform .25s ease; }
+.all-features[open] summary svg { transform: rotate(180deg); }
+table { width: 100%; border-collapse: collapse; font-size: var(--t-sm); table-layout: fixed; }
+th, td { padding: 14px var(--s1); text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { font-weight: 600; color: var(--muted); font-size: var(--t-xs); }
+tbody th { font-weight: 500; }
+th:first-child { width: 40%; padding-left: 0; }
+td { font-variant-numeric: tabular-nums; }
+td.no { color: var(--muted); }
+
+/* Booking */
+.book { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--s8); align-items: start; padding-bottom: var(--s16); }
+.book h2 { font-size: var(--t-xl); line-height: 1.08; }
+.book-copy { display: grid; gap: var(--s3); justify-items: start; }
+.book-copy p { color: var(--muted); max-width: 46ch; }
+.summary { display: grid; }
+.summary div { display: flex; justify-content: space-between; gap: var(--s2); padding-block: var(--s2); border-bottom: 1px solid var(--line); font-size: var(--t-sm); }
+.summary dt { color: var(--muted); }
+.summary dd { font-weight: 600; text-align: right; }
+.agenda { margin-top: var(--s3); display: grid; gap: var(--s1); font-size: var(--t-sm); color: var(--muted); }
+.agenda b { color: var(--fg); font-weight: 600; }
+
+footer .wrap {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s1) var(--s3);
+  padding-block: var(--s4); border-top: 1px solid var(--line); font-size: var(--t-xs); color: var(--muted);
+}
+
+/* Mobile action bar */
+.action-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: none;
+  padding: var(--s1) max(var(--s1), env(safe-area-inset-right, 0px)) calc(var(--s1) + env(safe-area-inset-bottom, 0px)) max(var(--s1), env(safe-area-inset-left, 0px));
+  transform: translateY(0); transition: transform .3s ease;
+}
+.action-bar.is-hidden { transform: translateY(calc(100% + 8px)); }
+.action-bar-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s2);
+  padding: 6px 6px 6px var(--s3); border-radius: var(--r-pill);
+}
+.action-bar-plan { display: grid; line-height: 1.3; min-width: 0; }
+.action-bar-plan b { font-size: var(--t-sm); font-weight: 600; }
+.action-bar-plan span { font-size: var(--t-xs); color: var(--muted); }
+
+@media (max-width: 960px) {
+  .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .diagram .h { display: none; }
+  .diagram .v { display: block; }
+  .book { grid-template-columns: minmax(0, 1fr); gap: var(--s6); }
+}
+@media (max-width: 760px) {
+  :root { --header-h: 68px; }
+  .nav-link.hide-sm, .nav .btn { display: none; }
+  .hero { padding-block: calc(var(--header-h) + var(--s4)) var(--s6); }
+  .section { padding-top: var(--s12); }
+  .pillars { grid-template-columns: minmax(0, 1fr); gap: var(--s3); }
+  .inperson, .inperson-list { grid-template-columns: minmax(0, 1fr); gap: var(--s3); }
+
+  /* Plans become a swipeable row; subgrid keeps their rows aligned across cards. */
+  .compare {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 86%;
+    overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    background: transparent; border: 0; padding: 0 0 var(--s1);
+  }
+  .plan, .plan:nth-of-type(n) { grid-column: auto; scroll-snap-align: start; background: var(--surface); border-color: var(--line); padding: var(--s3); }
+  .plan.is-selected { background: var(--accent-soft); border-color: var(--accent); }
+  /* Floating controls stack over running content here, so they need a denser material to stay legible. */
+  .nav.glass, .action-bar-inner.glass { background: color-mix(in srgb, var(--surface) 92%, transparent); }
+
+  .action-bar { display: block; }
+  footer .wrap { padding-bottom: calc(var(--s4) + 80px); }
+  .book { padding-bottom: var(--s12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap" style="width:100%">
+    <nav class="nav glass" aria-label="Main">
+      <a class="brand" href="#top">MKT <span>Consulting</span></a>
+      <div class="nav-links">
+        <a class="nav-link hide-sm" href="#how">How it works</a>
+        <a class="nav-link" href="#plans">Plans</a>
+        <a class="btn btn-primary btn-sm" href="#book">Book a call</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero hero-wall" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Digital communication and strategy</span>
+        <h1>Take your digital communication to the <em>next level</em>.</h1>
+        <p class="lede">We run the content engine behind your brand: short and long-form video, images and social posts made with AI, a strategy for every post, automated clipping, and a network of parallel accounts that sends viewers to your profile.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#plans">Choose a plan</a>
+          <a class="btn btn-secondary" href="#how">See how it works</a>
+        </div>
+        <p class="platforms">For TikTok, Instagram, YouTube, X, Facebook, LinkedIn, Threads and any other social platform</p>
+      </div>
+      <div class="stage-wrap">
+        <div class="stage" id="stage">
+          <canvas id="wall" role="img" aria-label="Illustration: a wall of phone feeds lights up as your posts and parallel accounts spread, and likes, comments and shares flow back to your account."></canvas>
+        </div>      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Everything we run points back to your account.</h2>
+        <p>Four services work as one system. Each one feeds the others, and all of them push views to your main profile.</p>
+      </div>
+
+      <figure class="diagram" style="margin:0">
+        <svg class="h" viewBox="0 0 1000 440" role="img" aria-label="Content generation and automated clipping feed your main account. Parallel accounts send viewers to it. Digital strategy plans the whole system.">
+          <defs>
+            <marker id="arrow-h" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+          </defs>
+          <rect class="d-frame" x="1" y="1" width="998" height="438" rx="32"/>
+          <text class="d-label" x="40" y="52">DIGITAL STRATEGY</text>
+          <text class="d-sub" x="40" y="86">Plans every post, every account and every target</text>
+
+          <rect class="d-node" x="48" y="120" width="260" height="88" rx="20"/>
+          <text class="d-title" x="72" y="158">Content generation</text>
+          <text class="d-sub" x="72" y="184">Video, images and posts</text>
+
+          <rect class="d-node" x="48" y="264" width="260" height="88" rx="20"/>
+          <text class="d-title" x="72" y="302">Automated clipping</text>
+          <text class="d-sub" x="72" y="328">Long formats into short clips</text>
+
+          <rect class="d-main" x="400" y="156" width="200" height="160" rx="20"/>
+          <text class="d-main-title" x="500" y="230" text-anchor="middle">Your account</text>
+          <text class="d-main-sub" x="500" y="258" text-anchor="middle">Main profile</text>
+
+          <rect class="d-node" x="692" y="176" width="260" height="120" rx="20"/>
+          <circle class="d-dot" cx="728" cy="206" r="12"/>
+          <circle class="d-dot" cx="750" cy="206" r="12"/>
+          <circle class="d-dot" cx="772" cy="206" r="12"/>
+          <text class="d-title" x="716" y="250">Parallel accounts</text>
+          <text class="d-sub" x="716" y="276">Send viewers to your profile</text>
+
+          <path class="d-flow" d="M308 164 C 352 164, 352 208, 392 208" marker-end="url(#arrow-h)"/>
+          <path class="d-flow" d="M308 308 C 352 308, 352 264, 392 264" marker-end="url(#arrow-h)"/>
+          <path class="d-flow" d="M692 236 L 608 236" marker-end="url(#arrow-h)"/>
+        </svg>
+
+        <svg class="v" viewBox="0 0 360 600" role="img" aria-label="Content generation and automated clipping feed your main account. Parallel accounts send viewers to it. Digital strategy plans the whole system.">
+          <defs>
+            <marker id="arrow-v" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+          </defs>
+          <rect class="d-frame" x="1" y="1" width="358" height="598" rx="32"/>
+          <text class="d-label" x="24" y="44">DIGITAL STRATEGY</text>
+          <text class="d-sub" x="24" y="74">Plans every post and every account</text>
+
+          <rect class="d-node" x="24" y="96" width="148" height="88" rx="20"/>
+          <text class="d-title" x="44" y="132">Content</text>
+          <text class="d-title" x="44" y="158">generation</text>
+
+          <rect class="d-node" x="188" y="96" width="148" height="88" rx="20"/>
+          <text class="d-title" x="208" y="132">Automated</text>
+          <text class="d-title" x="208" y="158">clipping</text>
+
+          <rect class="d-main" x="80" y="252" width="200" height="120" rx="20"/>
+          <text class="d-main-title" x="180" y="306" text-anchor="middle">Your account</text>
+          <text class="d-main-sub" x="180" y="332" text-anchor="middle">Main profile</text>
+
+          <rect class="d-node" x="24" y="440" width="312" height="132" rx="20"/>
+          <circle class="d-dot" cx="56" cy="474" r="12"/>
+          <circle class="d-dot" cx="78" cy="474" r="12"/>
+          <circle class="d-dot" cx="100" cy="474" r="12"/>
+          <text class="d-title" x="44" y="520">Parallel accounts</text>
+          <text class="d-sub" x="44" y="546">Send viewers to your profile</text>
+
+          <path class="d-flow" d="M98 184 C 98 220, 140 220, 140 244" marker-end="url(#arrow-v)"/>
+          <path class="d-flow" d="M262 184 C 262 220, 220 220, 220 244" marker-end="url(#arrow-v)"/>
+          <path class="d-flow" d="M180 440 L 180 380" marker-end="url(#arrow-v)"/>
+        </svg>
+      </figure>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Content generation</h3>
+          <p>Short and long-form video, images and social posts, produced with AI and edited for each platform, so your accounts never run out of material.</p>
+        </div>
+        <div class="pillar">
+          <h3>Automated clipping</h3>
+          <p>Interviews, streams and talks are cut into their strongest moments, captioned and scheduled automatically.</p>
+        </div>
+        <div class="pillar">
+          <h3>Parallel accounts</h3>
+          <p>Secondary accounts publish alongside yours and use automated traffic to send viewers back to your main profile.</p>
+        </div>
+        <div class="pillar">
+          <h3>Digital strategy</h3>
+          <p>What to post, when and where, planned around your view target and adjusted as the numbers come in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plans">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Plans</span>
+        <h2>Choose your plan by the impact you want.</h2>
+        <p>Every plan is built around a monthly view target, starting from your first month.</p>
+      </div>
+
+      <div class="compare">
+        <article class="plan" data-plan="basic" aria-labelledby="name-basic">
+          <div class="plan-name"><h3 id="name-basic">Basic</h3><p>For brands starting to grow online</p></div>
+          <div class="price"><span class="amt">$1,000</span><span class="per">USD per month</span></div>
+          <dl class="stat"><dt>Monthly view target</dt><dd class="num">1M–3M</dd></dl>
+          <dl class="stat"><dt>Videos published</dt><dd><span class="num">3</span> per day</dd></dl>
+          <ul class="features">
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>AI-generated videos, images and posts</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Digital strategy for every post</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Publishing and scheduling handled for you</li>
+          </ul>
+          <div></div>
+          <button class="btn btn-secondary" type="button" data-book="basic">Book a call</button>
+        </article>
+
+        <article class="plan" data-plan="standard" aria-labelledby="name-standard">
+          <div class="plan-name"><h3 id="name-standard">Standard</h3><p>For brands ready to scale reach</p></div>
+          <div class="price"><span class="amt">$3,000</span><span class="per">USD per month</span></div>
+          <dl class="stat"><dt>Monthly view target</dt><dd class="num">5M–10M</dd></dl>
+          <dl class="stat"><dt>Videos published</dt><dd><span class="num">10</span> per day</dd></dl>
+          <ul class="features">
+            <li class="base"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Everything in Basic</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Parallel account network feeding your profile</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Inorganic traffic from automated accounts</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>AI content creation across all accounts</li>
+          </ul>
+          <label class="addon" for="addon-custom">
+            <input type="checkbox" id="addon-custom">
+            <span><b>Add custom content creation</b>Made by our team for your brand. Quoted on the call.</span>
+          </label>
+          <button class="btn btn-secondary" type="button" data-book="standard">Book a call</button>
+        </article>
+
+        <article class="plan" data-plan="full" aria-labelledby="name-full">
+          <div class="plan-name"><h3 id="name-full">Full</h3><p>For brands that want to lead their niche</p></div>
+          <div class="price"><span class="amt">Custom</span><span class="per">Enterprise quote</span></div>
+          <dl class="stat"><dt>Monthly view target</dt><dd class="num">15M–25M</dd></dl>
+          <dl class="stat"><dt>Videos published</dt><dd><span class="num">25</span> per day</dd></dl>
+          <ul class="features">
+            <li class="base"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Everything in Standard</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Full capacity of the automated network</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Custom content creation included</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Clipping of interviews and long formats</li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>Positioning in the algorithms you want to break into</li>
+          </ul>
+          <div></div>
+          <button class="btn btn-secondary" type="button" data-book="full">Request a quote</button>
+        </article>
+      </div>
+
+      <details class="all-features" id="all-features" open>
+        <summary>Compare all features <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></summary>
+        <table>
+          <thead>
+            <tr><th scope="col"><span class="sr">Feature</span></th><th scope="col">Basic</th><th scope="col">Standard</th><th scope="col">Full</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">AI video, images and posts</th><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><th scope="row">Digital strategy</th><td>Yes</td><td>Yes</td><td>Complete</td></tr>
+            <tr><th scope="row">Parallel accounts</th><td class="no"><span aria-hidden="true">—</span><span class="sr">Not included</span></td><td>Yes</td><td>Full capacity</td></tr>
+            <tr><th scope="row">Custom content</th><td class="no"><span aria-hidden="true">—</span><span class="sr">Not included</span></td><td>Add-on</td><td>Yes</td></tr>
+            <tr><th scope="row">Interview clipping</th><td class="no"><span aria-hidden="true">—</span><span class="sr">Not included</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr">Not included</span></td><td>Yes</td></tr>
+            <tr><th scope="row">Algorithm positioning</th><td class="no"><span aria-hidden="true">—</span><span class="sr">Not included</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr">Not included</span></td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </details>
+
+      <div class="inperson">
+        <div class="inperson-head">
+          <h3>For in-person clients</h3>
+          <p>Available with any plan. Quoted on the call.</p>
+        </div>
+        <ul class="inperson-list">
+          <li><b>Event coverage</b><span>Our team films your events in person and turns them into content for every account.</span></li>
+          <li><b>Media appearances</b><span>We set up interviews, podcasts and press spots for you, then clip them for your accounts.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="book">
+    <div class="wrap book">
+      <div class="book-copy">
+        <span class="eyebrow">Book a call</span>
+        <h2>Let's plan your first 90 days.</h2>
+        <p>A 30-minute call with our strategy team. We review your current accounts, confirm the plan that fits your goal, and walk you through launch.</p>
+        <a class="btn btn-primary" id="book-link" href="#book">Choose a time</a>
+      </div>
+      <div>
+        <dl class="summary">
+          <div><dt>Plan</dt><dd id="sum-plan">Standard</dd></div>
+          <div><dt>Monthly view target</dt><dd id="sum-target" class="num">5M–10M</dd></div>
+          <div><dt>Price</dt><dd id="sum-price">$3,000 USD per month</dd></div>
+          <div id="sum-addon" hidden><dt>Add-on</dt><dd>Custom content creation</dd></div>
+        </dl>
+        <ul class="agenda">
+          <li><b>On the call</b></li>
+          <li>Review of your profiles and audience</li>
+          <li>Your goal and the plan that fits it</li>
+          <li>Launch timeline and first content batch</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MKT Consulting</span>
+    <span>View figures are monthly targets for each plan, not guaranteed results.</span>
+  </div>
+</footer>
+
+<div class="action-bar is-hidden" id="action-bar">
+  <div class="action-bar-inner glass">
+    <div class="action-bar-plan"><b id="bar-plan">Standard · $3,000/mo</b><span id="bar-target">5M–10M views per month</span></div>
+    <a class="btn btn-primary btn-sm" href="#book">Book a call</a>
+  </div>
+</div>
+
+<script>
+// ===== BOOKING SETUP =====
+// Paste your scheduling page link (Calendly, Cal.com, Google Calendar booking page, etc.).
+// Example: "https://calendly.com/mkt-consulting/30min"
+const BOOKING_URL = "";
+// Used only if BOOKING_URL is empty: "Choose a time" then opens an email to this address instead.
+// Example: "hello@mktconsulting.com"
+const CONTACT_EMAIL = "";
+// ==========================
+
+const PLANS = {
+  basic:    { name: "Basic",    target: "1M–3M",   price: "$1,000 USD per month", short: "$1,000/mo", cta: "Book a call" },
+  standard: { name: "Standard", target: "5M–10M",  price: "$3,000 USD per month", short: "$3,000/mo", cta: "Book a call" },
+  full:     { name: "Full",     target: "15M–25M", price: "Enterprise quote",     short: "Quote",     cta: "Request a quote" }
+};
+const addon = document.getElementById("addon-custom");
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+let selected = "standard";
+
+function bookingHref(key, withAddon) {
+  const label = PLANS[key].name + (withAddon ? " + custom content" : "");
+  if (BOOKING_URL) {
+    // The plan rides along as a UTM tag, which Calendly and Cal.com save on the booking.
+    const u = new URL(BOOKING_URL);
+    u.searchParams.set("utm_source", "website");
+    u.searchParams.set("utm_campaign", "book-a-call");
+    u.searchParams.set("utm_content", label);
+    return u.toString();
+  }
+  return "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Book a call: " + label + " plan");
+}
+
+function selectPlan(key) {
+  selected = key;
+  const p = PLANS[key];
+  document.querySelectorAll(".plan").forEach(el => {
+    const on = el.dataset.plan === key;
+    el.classList.toggle("is-selected", on);
+    const btn = el.querySelector("[data-book]");
+    btn.classList.toggle("btn-primary", on);
+    btn.classList.toggle("btn-secondary", !on);
+  });
+  const withAddon = key === "standard" && addon.checked;
+  document.getElementById("sum-plan").textContent = p.name;
+  document.getElementById("sum-target").textContent = p.target;
+  document.getElementById("sum-price").textContent = p.price;
+  document.getElementById("sum-addon").hidden = !withAddon;
+  document.getElementById("bar-plan").textContent = p.name + " · " + p.short;
+  document.getElementById("bar-target").textContent = p.target + " views per month";
+  const link = document.getElementById("book-link");
+  link.href = bookingHref(key, withAddon);
+  if (BOOKING_URL) { link.target = "_blank"; link.rel = "noopener"; } else { link.removeAttribute("target"); }
+}
+
+document.querySelectorAll(".plan").forEach(el => el.addEventListener("click", e => {
+  if (!e.target.closest("button, label, input")) selectPlan(el.dataset.plan);
+}));
+document.querySelectorAll("[data-book]").forEach(b => b.addEventListener("click", () => {
+  selectPlan(b.dataset.book);
+  document.getElementById("book").scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth" });
+}));
+addon.addEventListener("change", () => selectPlan(selected));
+selectPlan("standard");
+
+// Mobile action bar: hidden while the hero or the booking section is on screen.
+(function actionBar() {
+  const bar = document.getElementById("action-bar");
+  const visible = new Set();
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => en.isIntersecting ? visible.add(en.target.id) : visible.delete(en.target.id));
+    bar.classList.toggle("is-hidden", visible.size > 0);
+  }, { threshold: 0.05 });
+  io.observe(document.getElementById("top"));
+  io.observe(document.getElementById("book"));
+})();
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// Hero: a wall of feeds. Each screen is a person; posts and parallel accounts light them up,
+// and likes, comments and shares travel back to the client's account.
+(function wallHero() {
+  const hero = document.getElementById("top");
+  const stage = document.getElementById("stage");
+  const canvas = document.getElementById("wall");
+  let renderer;
+  try {
+    if (!window.THREE) throw new Error("three.js did not load");
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  } catch (e) { hero.classList.add("no-webgl"); return; }
+
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0xffffff, 18, 40);
+  const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 200);
+  const look = new THREE.Vector3(0, 0, -6);
+  const base = new THREE.Vector3(0, 13, 15);
+  const SX = 1.0, SZ = 1.6, NEAR_Z = 3, SPEED = 3.2, CYCLE = 10;
+  const PROFILE_POS = new THREE.Vector3(0, 2.6, NEAR_Z + 0.8);
+  const PLAN3D = {
+    basic:    { reach: 5.5, side: 0, sideReach: 0,   accept: 0.55, eng: 0.10, caption: "Basic: 3 posts a day from your account." },
+    standard: { reach: 8,   side: 4, sideReach: 4.5, accept: 0.7,  eng: 0.14, caption: "Standard: 10 posts a day, plus parallel accounts that send viewers to you." },
+    full:     { reach: 11,  side: 8, sideReach: 6.5, accept: 0.85, eng: 0.18, caption: "Full: 25 posts a day, plus the full parallel network." }
+  };
+  const tok = {};
+  const dim = new THREE.Color(), tmp = new THREE.Color();
+  const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), v3 = new THREE.Vector3(), sc = new THREE.Vector3();
+  let small = null, C = 0, R = 0, wall = null, phones = [], sources = [], rings = [], arcs = [];
+  let profile = null, iconTex = [], pool = [];
+  let planKey = "full", t0 = performance.now(), lit = 0, eng = 0, fullLit = 1, pulse = 0;
+  let mx = 0, my = 0, cx = 0, cy = 0, raf = 0, onScreen = true;
+
+  function rng(seed) { return () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
+  function rounded(w, h, r) {
+    const s = new THREE.Shape(), x = -w / 2, y = -h / 2;
+    s.moveTo(x + r, y); s.lineTo(x + w - r, y); s.quadraticCurveTo(x + w, y, x + w, y + r);
+    s.lineTo(x + w, y + h - r); s.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    s.lineTo(x + r, y + h); s.quadraticCurveTo(x, y + h, x, y + h - r);
+    s.lineTo(x, y + r); s.quadraticCurveTo(x, y, x + r, y);
+    return s;
+  }
+  function readTokens() {
+    const s = getComputedStyle(document.documentElement);
+    ["surface", "fg", "muted", "line"].forEach(k => tok[k] = new THREE.Color(s.getPropertyValue("--" + k).trim()));
+    tok.accent = new THREE.Color(s.getPropertyValue("--accent-fill").trim());
+  }
+  function iconTexture(kind, stroke, fill) {
+    const c = document.createElement("canvas"); c.width = c.height = 128;
+    const x = c.getContext("2d");
+    x.lineWidth = 10; x.lineJoin = "round"; x.lineCap = "round"; x.beginPath();
+    if (kind === 0) { // like
+      x.moveTo(64, 104); x.bezierCurveTo(20, 76, 16, 44, 36, 32); x.bezierCurveTo(50, 24, 62, 32, 64, 42);
+      x.bezierCurveTo(66, 32, 78, 24, 92, 32); x.bezierCurveTo(112, 44, 108, 76, 64, 104);
+    } else if (kind === 1) { // comment
+      x.moveTo(30, 28); x.lineTo(98, 28); x.quadraticCurveTo(110, 28, 110, 40); x.lineTo(110, 78);
+      x.quadraticCurveTo(110, 90, 98, 90); x.lineTo(56, 90); x.lineTo(36, 106); x.lineTo(38, 90); x.lineTo(30, 90);
+      x.quadraticCurveTo(18, 90, 18, 78); x.lineTo(18, 40); x.quadraticCurveTo(18, 28, 30, 28);
+    } else { // share
+      x.moveTo(24, 96); x.quadraticCurveTo(30, 52, 78, 50); x.lineTo(78, 30); x.lineTo(108, 62);
+      x.lineTo(78, 94); x.lineTo(78, 74); x.quadraticCurveTo(44, 72, 24, 96);
+    }
+    x.closePath(); x.fillStyle = fill; x.fill(); x.strokeStyle = stroke; x.stroke();
+    return new THREE.CanvasTexture(c);
+  }
+
+  function buildWall() {
+    if (wall) { scene.remove(wall); wall.geometry.dispose(); wall.material.dispose(); }
+    C = small ? 13 : 30; R = small ? 22 : 30;
+    const geo = new THREE.ShapeGeometry(rounded(0.7, 1.25, 0.12), 4);
+    geo.rotateX(-Math.PI / 2);
+    wall = new THREE.InstancedMesh(geo, new THREE.MeshBasicMaterial({ color: 0xffffff }), C * R);
+    phones = [];
+    const r = rng(7);
+    for (let row = 0; row < R; row++) for (let c = 0; c < C; c++) {
+      phones.push({ x: (c - (C - 1) / 2) * SX, z: NEAR_Z - row * SZ, roll: r(), jitter: r() * 0.3, eroll: r(), act: Infinity, fired: false });
+    }
+    phones.forEach((ph, i) => wall.setColorAt(i, dim));
+    scene.add(wall);
+  }
+
+  function buildProfile() {
+    profile = new THREE.Group();
+    const shape = rounded(1.5, 2.7, 0.22);
+    const body = new THREE.Mesh(new THREE.ShapeGeometry(shape, 6), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0.94 }));
+    const edge = new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(shape.getPoints(12).map(p => new THREE.Vector3(p.x, p.y, 0.01))), new THREE.LineBasicMaterial());
+    const avatar = new THREE.Mesh(new THREE.CircleGeometry(0.26, 32), new THREE.MeshBasicMaterial());
+    avatar.position.set(0, 0.85, 0.02);
+    const bar1 = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.12), new THREE.MeshBasicMaterial());
+    bar1.position.set(0, 0.35, 0.02);
+    const bar2 = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 0.12), new THREE.MeshBasicMaterial());
+    bar2.position.set(-0.15, 0.12, 0.02);
+    const media = new THREE.Mesh(new THREE.ShapeGeometry(rounded(1.1, 0.9, 0.1), 4), new THREE.MeshBasicMaterial());
+    media.position.set(0, -0.6, 0.02);
+    profile.add(body, edge, avatar, bar1, bar2, media);
+    profile.userData = { body, edge, avatar, bars: [bar1, bar2], media };
+    profile.position.copy(PROFILE_POS);
+    profile.rotation.x = -0.5;
+    scene.add(profile);
+  }
+
+  function buildPool() {
+    pool.forEach(p => { scene.remove(p.sprite); p.sprite.material.dispose(); });
+    iconTex.forEach(t => t.dispose());
+    const stroke = "#" + tok.accent.getHexString(), fill = "#" + tok.surface.getHexString();
+    iconTex = [0, 1, 2].map(k => iconTexture(k, stroke, fill));
+    pool = [];
+    for (let i = 0; i < 90; i++) {
+      const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: iconTex[i % 3], transparent: true, depthWrite: false }));
+      sprite.visible = false;
+      scene.add(sprite);
+      pool.push({ sprite, from: new THREE.Vector3(), ctrl: new THREE.Vector3(), t0: 0, busy: false });
+    }
+  }
+
+  function pickSources(P) {
+    const r = rng(23);
+    const near = phones[C + Math.floor(C / 2)];
+    const list = [{ x: near.x, z: near.z, start: 0.3, main: true }];
+    const maxX = small ? 4.5 : 9;
+    let guard = 0;
+    while (list.length < P.side + 1 && guard++ < 1000) {
+      const row = 3 + Math.floor(r() * Math.min(9, R - 4));
+      const ph = phones[row * C + Math.floor(r() * C)];
+      if (Math.abs(ph.x) > maxX) continue;
+      if (list.some(s => Math.hypot(s.x - ph.x, s.z - ph.z) < 3.2)) continue;
+      list.push({ x: ph.x, z: ph.z, start: 1.0 + (list.length - 1) * 0.35, main: false });
+    }
+    return list;
+  }
+  function activate(P, srcs) {
+    let count = 0;
+    for (const ph of phones) {
+      ph.act = Infinity;
+      for (const s of srcs) {
+        const d = Math.hypot(ph.x - s.x, ph.z - s.z);
+        if (d < 0.01) { ph.act = Math.min(ph.act, s.start); continue; }
+        if (d <= (s.main ? P.reach : P.sideReach) && ph.roll < P.accept) ph.act = Math.min(ph.act, s.start + d / SPEED + ph.jitter);
+      }
+      if (ph.act < Infinity) count++;
+    }
+    return count;
+  }
+  function disposeAll(list) { list.forEach(o => { scene.remove(o); o.geometry.dispose(); o.material.dispose(); }); }
+  function buildMarkers() {
+    disposeAll(rings); disposeAll(arcs);
+    rings = sources.map(s => {
+      const m = new THREE.Mesh(new THREE.RingGeometry(0.55, 0.68, 40).rotateX(-Math.PI / 2),
+        new THREE.MeshBasicMaterial({ color: tok.accent, transparent: true, opacity: 0, depthWrite: false }));
+      m.position.set(s.x, 0.02, s.z); m.userData.s = s; scene.add(m); return m;
+    });
+    arcs = sources.filter(s => !s.main).map(s => {
+      const from = new THREE.Vector3(s.x, 0.05, s.z);
+      const ctrl = new THREE.Vector3(s.x * 0.5, 4.5, (s.z + PROFILE_POS.z) / 2);
+      const pts = new THREE.QuadraticBezierCurve3(from, ctrl, PROFILE_POS).getPoints(48);
+      const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: tok.accent, transparent: true, opacity: 0.55 }));
+      line.geometry.setDrawRange(0, 0); line.userData.s = s; scene.add(line); return line;
+    });
+  }
+
+  function restart(now) {
+    t0 = now; lit = 0; eng = 0;
+    phones.forEach(ph => { ph.fired = false; });
+    pool.forEach(p => { p.busy = false; p.sprite.visible = false; });
+  }
+  function setPlan(key) {
+    planKey = key;
+    const P = PLAN3D[key];
+    fullLit = Math.max(1, activate(PLAN3D.full, pickSources(PLAN3D.full)));
+    sources = pickSources(P);
+    activate(P, sources);
+    buildMarkers();
+    restart(performance.now());
+    kick();
+  }
+  function applyColors() {
+    readTokens();
+    renderer.setClearColor(tok.surface, 1);
+    scene.fog.color.copy(tok.surface);
+    dim.copy(tok.line).lerp(tok.muted, 0.3);
+    const u = profile.userData;
+    u.body.material.color.copy(tok.surface);
+    u.edge.material.color.copy(tok.accent);
+    u.avatar.material.color.copy(tok.accent);
+    u.bars.forEach(b => b.material.color.copy(tok.line));
+    rings.forEach(r => r.material.color.copy(tok.accent));
+    arcs.forEach(a => a.material.color.copy(tok.accent));
+    buildPool();
+  }
+
+  function spawn(ph, t) {
+    const p = pool.find(p => !p.busy);
+    if (!p) { eng++; return; }
+    p.busy = true; p.t0 = t;
+    p.from.set(ph.x, 0.3, ph.z);
+    p.ctrl.set((ph.x + PROFILE_POS.x) / 2, 3.5 + Math.random(), (ph.z + PROFILE_POS.z) / 2);
+    p.sprite.visible = true;
+  }
+
+  function frame(now) {
+    const still = reduce.matches;
+    let t = still ? 7.5 : (now - t0) / 1000;
+    if (t > CYCLE) { restart(now); t = 0; }
+    const P = PLAN3D[planKey];
+    const fade = still ? 1 : 1 - Math.min(1, Math.max(0, (t - (CYCLE - 1.2)) / 1.2));
+    if (still) { lit = phones.filter(ph => ph.act <= t).length; eng = Math.round(lit * P.eng); }
+
+    phones.forEach((ph, i) => {
+      let k = 0, lift = 0, s = 1;
+      if (t >= ph.act) {
+        if (!ph.fired && !still) {
+          ph.fired = true; lit++;
+          if (ph.eroll < P.eng && t < CYCLE - 1.6) spawn(ph, t);
+        }
+        k = Math.min(1, (t - ph.act) / 0.45);
+        const bump = still ? 0 : Math.sin(Math.PI * k);
+        s = 1 + 0.35 * bump; lift = 0.35 * bump;
+      }
+      tmp.copy(dim).lerp(tok.accent, k * fade);
+      wall.setColorAt(i, tmp);
+      v3.set(ph.x, lift, ph.z); sc.set(s, 1, s);
+      wall.setMatrixAt(i, m4.compose(v3, q, sc));
+    });
+    wall.instanceMatrix.needsUpdate = true;
+    if (wall.instanceColor) wall.instanceColor.needsUpdate = true;
+
+    rings.forEach(ring => {
+      const s = ring.userData.s, on = t >= s.start;
+      const ph = still ? 0.3 : ((t - s.start) * 0.8) % 1;
+      ring.material.opacity = on ? (1 - ph) * 0.9 * fade : 0;
+      ring.scale.setScalar(on ? (s.main ? 1.4 : 1) * (1 + ph * 1.6) : 0.001);
+    });
+    arcs.forEach(line => {
+      const k = Math.min(1, Math.max(0, (t - line.userData.s.start - 0.3) / 1.2));
+      line.geometry.setDrawRange(0, Math.floor(k * 49));
+      line.material.opacity = 0.55 * fade;
+    });
+
+    for (const p of pool) {
+      if (!p.busy) continue;
+      const k = (t - p.t0) / 1.6;
+      if (k >= 1) { p.busy = false; p.sprite.visible = false; eng++; pulse = 1; continue; }
+      const a = 1 - k;
+      v3.set(0, 0, 0).addScaledVector(p.from, a * a).addScaledVector(p.ctrl, 2 * a * k).addScaledVector(PROFILE_POS, k * k);
+      p.sprite.position.copy(v3);
+      const s = 0.55 * (1 - 0.45 * k);
+      p.sprite.scale.set(s, s, 1);
+      p.sprite.material.opacity = Math.min(1, k * 8) * fade;
+    }
+
+    const reachK = Math.min(1, lit / fullLit) * fade;
+    const engK = Math.min(1, eng / (fullLit * PLAN3D.full.eng)) * fade;
+    pulse *= 0.9;
+    profile.scale.setScalar(1 + 0.06 * pulse);
+    profile.userData.media.material.color.copy(tok.line).lerp(tok.accent, 0.15 + 0.85 * engK);
+
+    cx += (mx - cx) * 0.05; cy += (my - cy) * 0.05;
+    camera.position.set(base.x + cx * 1.6, base.y - cy * 0.8, base.z);
+    camera.lookAt(look);
+    renderer.render(scene, camera);
+    if (onScreen && !still) raf = requestAnimationFrame(frame);
+  }
+  function kick() { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); }
+
+  function resize() {
+    const w = stage.clientWidth, h = stage.clientHeight;
+    if (!w || !h) return;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    const narrow = camera.aspect < 1;
+    base.set(0, narrow ? 17 : 13, NEAR_Z + (narrow ? 17 : 12));
+    camera.updateProjectionMatrix();
+    const nowSmall = w < 640;
+    if (nowSmall !== small) {
+      small = nowSmall;
+      buildWall(); setPlan(planKey);
+    }
+    kick();
+  }
+
+  readTokens();
+  dim.copy(tok.line);
+  buildProfile();
+  applyColors();
+  stage.addEventListener("pointermove", e => {
+    const r = stage.getBoundingClientRect();
+    mx = (e.clientX - r.left) / r.width * 2 - 1; my = (e.clientY - r.top) / r.height * 2 - 1;
+  });
+  stage.addEventListener("pointerleave", () => { mx = 0; my = 0; });
+  new ResizeObserver(resize).observe(stage);
+  new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; if (onScreen) { restart(performance.now()); kick(); } else cancelAnimationFrame(raf); }).observe(stage);
+  const retheme = () => { applyColors(); kick(); };
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", retheme);
+  reduce.addEventListener("change", kick);
+  new MutationObserver(retheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>
+</body>
+</html>
