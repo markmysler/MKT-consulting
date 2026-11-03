@@ -146,7 +146,8 @@ a { color: inherit; }
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: var(--s2);
   padding: 6px 6px 6px var(--s3); border-radius: var(--r-pill);
 }
-.brand { display: inline-flex; align-items: baseline; gap: 7px; font-family: var(--font-display); font-weight: 600; font-size: var(--t-md); text-decoration: none; letter-spacing: -0.01em; }
+/* Baseline-aligned wordmark + "Consulting"; the top padding offsets the descender space so the ink sits centered in the nav. */
+.brand { display: inline-flex; align-items: baseline; gap: 7px; padding-top: 0.25em; font-family: var(--font-display); font-weight: 600; font-size: var(--t-md); line-height: 1; text-decoration: none; letter-spacing: -0.01em; }
 .brand-mark { height: 19px; width: auto; flex: none; }
 .brand-mark .ink { fill: currentColor; }
 .brand-mark .dot { fill: var(--accent-fill); }
