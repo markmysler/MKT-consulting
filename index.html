@@ -146,8 +146,12 @@ a { color: inherit; }
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: var(--s2);
   padding: 6px 6px 6px var(--s3); border-radius: var(--r-pill);
 }
-.brand { font-family: var(--font-display); font-weight: 700; font-size: var(--t-md); text-decoration: none; letter-spacing: -0.01em; }
-.brand span { color: var(--muted); font-weight: 600; }
+/* Baseline-aligned wordmark + "Consulting"; the top padding offsets the descender space so the ink sits centered in the nav. */
+.brand { display: inline-flex; align-items: baseline; gap: 7px; padding-top: 0.25em; font-family: var(--font-display); font-weight: 600; font-size: var(--t-md); line-height: 1; text-decoration: none; letter-spacing: -0.01em; }
+.brand-mark { height: 19px; width: auto; flex: none; }
+.brand-mark .ink { fill: currentColor; }
+.brand-mark .dot { fill: var(--accent-fill); }
+.brand span { color: var(--muted); }
 .nav-links { display: flex; align-items: center; gap: var(--s1); }
 .nav-link { font-size: var(--t-sm); font-weight: 500; text-decoration: none; color: var(--muted); padding: 10px 12px; border-radius: var(--r-pill); }
 .nav-link:hover { color: var(--fg); }
@@ -340,7 +344,7 @@ footer .wrap {
 <header class="site-header">
   <div class="wrap" style="width:100%">
     <nav class="nav glass" aria-label="Main">
-      <a class="brand" href="#top">MKT <span>Consulting</span></a>
+      <a class="brand" href="#top" aria-label="MKT Consulting, back to top"><svg class="brand-mark" viewBox="36 -700 1779 713" aria-hidden="true" focusable="false"><path class="ink" d="M36.0 0V-293V-528H173.0V-313H181.0Q188.0 -397 208.5 -447.0Q229.0 -497 263.5 -519.5Q298.0 -542 346.0 -542Q396.0 -542 427.0 -517.5Q458.0 -493 473.0 -442.5Q488.0 -392 487.0 -313H495.0Q502.0 -396 524.0 -446.0Q546.0 -496 582.0 -519.0Q618.0 -542 667.0 -542Q708.0 -542 738.0 -527.0Q768.0 -512 788.5 -482.0Q809.0 -452 819.0 -406.5Q829.0 -361 829.0 -300V0H667.0V-286Q667.0 -324 660.5 -349.5Q654.0 -375 641.0 -387.5Q628.0 -400 608.0 -400Q582.0 -400 560.0 -376.5Q538.0 -353 524.5 -306.0Q511.0 -259 511.0 -187V0H353.0V-290Q353.0 -328 346.5 -352.0Q340.0 -376 326.5 -388.0Q313.0 -400 293.0 -400Q268.0 -400 246.5 -379.5Q225.0 -359 211.5 -312.0Q198.0 -265 198.0 -187V0ZM836.0 0V-700H994.0V-329Q1028.0 -347 1052.5 -370.0Q1077.0 -393 1094.0 -419.5Q1111.0 -446 1121.5 -473.5Q1132.0 -501 1139.0 -528H1325.0Q1314.0 -488 1293.5 -450.5Q1273.0 -413 1243.0 -380.5Q1213.0 -348 1173.5 -322.0Q1134.0 -296 1086.0 -279V-271Q1148.0 -281 1187.5 -273.5Q1227.0 -266 1250.0 -245.5Q1273.0 -225 1285.5 -194.0Q1298.0 -163 1305.0 -125L1328.0 0H1153.0L1142.0 -88Q1138.0 -120 1131.0 -148.0Q1124.0 -176 1104.0 -193.5Q1084.0 -211 1041.0 -211H994.0V0ZM1528.0 12Q1435.0 12 1389.5 -35.5Q1344.0 -83 1344.0 -183V-402H1286.0V-504H1289.0Q1351.0 -512 1377.0 -545.5Q1403.0 -579 1409.0 -647V-649H1504.0V-528H1625.0V-398H1504.0V-198Q1504.0 -160 1522.5 -144.0Q1541.0 -128 1568.0 -128Q1582.0 -128 1597.0 -132.0Q1612.0 -136 1625.0 -143V-2Q1594.0 7 1570.0 9.5Q1546.0 12 1528.0 12Z"/><path class="dot" d="M1711.0 13Q1660.0 13 1634.5 -9.0Q1609.0 -31 1609.0 -77Q1609.0 -124 1634.5 -146.0Q1660.0 -168 1711.0 -168Q1763.0 -168 1789.0 -146.0Q1815.0 -124 1815.0 -77Q1815.0 13 1711.0 13Z"/></svg><span>Consulting</span></a>
       <div class="nav-links">
         <a class="nav-link hide-sm" href="#how">How it works</a>
         <a class="nav-link" href="#plans">Plans</a>
